@@ -1,0 +1,184 @@
+<html>  
+<head>  
+<style>   
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed'); 
+.menu-main {  
+   list-style: none;  
+   margin: 40px 0 5px;  
+   padding: 25px 0 5px;  
+   text-align: center;  
+   background: rgb(107, 136, 172);  
+}  
+.menu-main li {display: inline-block;}  
+.menu-main li:after {  
+   content: "|";  
+   color: rgb(231, 231, 175);  
+   display: inline-block;  
+   vertical-align: top;  
+   transition: color .2s;  
+}  
+.menu-main li:last-child:after {content:nonde;}  
+.menu-main a{  
+   text-align: none;  
+  
+   font-family: "Ununtu condensed", sans-serif;  
+   letter-spacing: 2px;  
+   position: relative;  
+   padding-bottom: 20px;  
+   margin: 0 34px 0 30px;  
+   font-size: 20px;  
+   text-transform: uppercase;  
+   display: inline-block;  
+   transition: color .2s;  
+}  
+.menu-main a, .menu-main a:visited {color: yellow}  
+.menu-main a.current, .menu-main a:hover {color:rgb(105, 161, 111)}  
+.menu-main a:befor,  
+.menu-main a:after{  
+   content: "";  
+   position: absolute;  
+   height: 4px;  
+   top:auto;  
+   right: 50%;  
+   bottom: -5px;  
+   left: 50px;  
+   background: rgb(184, 212, 184);  
+   transition: .8s;  
+}   
+.menu-main a:hover:before, .menu-main  
+* {  
+    box-sizing: border-box;  
+}  
+  
+ 
+ 
+body { 
+    margin: 0; 
+    font-family: Arial; 
+} 
+ 
+ 
+.column { 
+    float: left; 
+    width: 25%; 
+    padding: 10px; 
+} 
+ 
+ 
+.column img { 
+    opacity: 0.8;  
+    cursor: pointer;  
+} 
+ 
+.column img:hover { 
+    opacity: 1; 
+} 
+ 
+ 
+.row:after { 
+    content: ""; 
+display: table;  
+    clear: both; 
+} 
+ 
+ 
+.container { 
+    position: relative; 
+    display: none; 
+} 
+ 
+ 
+.closebtn { 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    color:red; 
+    font-size: 35px; 
+    cursor: pointer; 
+} 
+.button_for_change_color { 
+  border-radius: 10px; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 550; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  border-color: aliceblue; 
+  color: #feb386; 
+  border: none; 
+} 
+</style>  
+</head>  
+<body>  
+<ul class="menu-main">  
+   <li><a href="#text">world</a></li>  
+   <li><a href="">animals</a></li>  
+   <li><a href="">people</a></li>  
+   <li><a href="">city</a></li>  
+</ul>  
+<div style="text-align: center;"> 
+<h1>Галерея</h1> 
+ 
+<p>нажми пж</p> 
+ 
+</div> 
+<div class="world"> 
+     <div class="column"> 
+        <img src="https://mobimg.b-cdn.net/v3/fetch/b7/b758ed208f649264134cac0446661ca0.jpeg?w=1470&r=0.5625"width="50%" onclick="myFunction(this)" > 
+     </div> 
+     
+     <div class="column"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWJ54jyM1pTAZG27svHh3IoSq0p3kZuc1r8g&usqp=CAU" width="50%" onclick="myFunction(this)"> 
+     </div> 
+     <div class="column"> 
+        <img src="https://klike.net/uploads/posts/2022-08/1661854911_j-5.jpg" width="50%" onclick="myFunction(this)"> 
+     </div> 
+     <div class="column"> 
+        <img src="https://sportishka.com/uploads/posts/2022-04/1650721885_52-sportishka-com-p-moskva-siti-krasivo-foto-52.jpg" width="15%" style="position: absolute ;right: 200px ; margin-top:-140px"  onclick="myFunction(this)"> 
+     </div> 
+</div> 
+<div class="container"> 
+<span onclick="this.parentElement.style.display='none'">нафиг всё</span> 
+
+<img id="expandedImg"; style='none'> 
+ 
+ 
+</div> 
+</div> 
+<button onclick="change_color()" class="button_for_change_color" style="position:absolute; top:20px; right:20px">сменить цвет</button> 
+<script> 
+    function myFunction(imgs) { 
+ var expandImg = document.getElementById("expandedImg"); 
+ expandImg.src = imgs.src 
+ expandImg.parentElement.style.display = "block"; 
+    function myFunction(imgs) {  
+        var expandImg = document.getElementById("expandedImg");  
+        var imgText = document.getElementById("imgtext");
+expandImg.src = imgs.src; 
+         
+        expandImg.parentElement.style.display = "block";  
+    } 
+    } 
+    function change_color() { 
+              if(document.body.style.background == "black") { 
+              document.body.style.color = "black"; 
+              document.body.style.background = "white"; 
+               
+ 
+          } else { 
+            document.body.style.background = "black"; 
+            document.body.style.color = "white"; 
+               
+          } 
+     
+ 
+ 
+   } 
+ 
+    
+</script> 
+<div style="position: absolute, top = 70px"> 
+ <li>  <a name="text"></a></li> 
+      <p></p> 
+   </div> 
+</body> 
+</html>
